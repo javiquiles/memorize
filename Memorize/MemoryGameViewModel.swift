@@ -5,8 +5,10 @@
 //  Created by Javier Alejandro Quiles on 26/03/2021.
 //
 
-class MemoryGameViewModel {
-    private var model: MemoryGameModel<String> = MemoryGameViewModel.createMemoryGame()
+import SwiftUI
+
+class MemoryGameViewModel: ObservableObject {
+    @Published private var model = MemoryGameViewModel.createMemoryGame()
 
     static func createMemoryGame() -> MemoryGameModel<String> {
         let emojis = ["🇦🇷", "🇧🇷", "🇵🇹"]
